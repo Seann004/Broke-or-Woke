@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_livingroom_day"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_gradient_overlay" />
+
+    <!-- Coin container -->
+    <FrameLayout
+        android:id="@+id/coinContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="40dp">
+
+        <!-- Eyebrow label -->
+        <TextView
+            android:id="@+id/tvEyebrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="A FINANCIAL SERIOUS GAME"
+            android:textColor="#AAFFFFFF"
+            android:textSize="12sp"
+            android:letterSpacing="0.2"
+            android:alpha="0"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- BROKE -->
+        <TextView
+            android:id="@+id/tvBroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BROKE"
+            android:textColor="#EF9F27"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            android:lineSpacingExtra="-4dp" />
+
+        <!-- OR -->
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="— or —"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:letterSpacing="0.15"
+            android:alpha="0"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp" />
+
+        <!-- WOKE -->
+        <TextView
+            android:id="@+id/tvWoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="WOKE?"
+            android:textColor="#AFA9EC"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            android:lineSpacingExtra="-4dp" />
+
+        <!-- Accent line -->
+        <View
+            android:id="@+id/accentLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#EF9F27"
+            android:textStyle="bold"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Typewriter text -->
+        <TextView
+            android:id="@+id/tvTypewriter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#B3FFFFFF"
+            android:textSize="12sp"
+            android:alpha="0"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Stats row -->
+        <LinearLayout
+            android:id="@+id/statsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:alpha="0"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="#EF9F27"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONTHS"
+                    android:textColor="#88FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="#33FFFFFF"
+                android:layout_marginHorizontal="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="#EF9F27"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VOICES"
+                    android:textColor="#88FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="#33FFFFFF"
+                android:layout_marginHorizontal="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="#EF9F27"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SALARY"
+                    android:textColor="#88FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Begin button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Begin Your Story  ▶"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:paddingHorizontal="36dp"
+            android:paddingVertical="12dp"
+            android:alpha="0"
+            app:backgroundTint="#EF9F27"
+            app:cornerRadius="24dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        <!-- Matric / name -->
+        <TextView
+            android:id="@+id/tvCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="By Ng Sean Sean  ·  23004914"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:alpha="0"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,387 @@
+[
+  {
+    "id": "s0_prologue",
+    "location": "Apartment — moving day, evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Cardboard boxes. A single mattress. The smell of fresh paint and someone else's cooking from down the hall. You made it — KL, first job, first apartment."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "It's smaller than you imagined. But it's yours. Well — half yours."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "happy",
+        "text": "Weh, finally! I was starting to think you got lost. I already took the bigger room — hope you don't mind. Also the wifi password is 'ilovemoney123'. I thought it was motivational."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "He grins like he's known you for years. You've spoken maybe three times in a Facebook group. Your phone buzzes."
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "📧 HR Notification: Welcome aboard! Your first salary of RM 2,500 will be credited on the 25th. Please complete your onboarding by Friday."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "RM 2,500. The number sits in your chest like something heavy and exciting at the same time."
+      }
+    ],
+    "choices": [
+      {
+        "text": "Finally. First thing — I'm making a proper savings plan.",
+        "effects": { "clara_rel": 5 },
+        "flags": ["planner"],
+        "next": "s1_pantry"
+      },
+      {
+        "text": "I already know what I'm spending it on. I earned this.",
+        "effects": { "aiden_rel": 5 },
+        "flags": ["spender"],
+        "next": "s1_pantry"
+      },
+      {
+        "text": "Honestly? I have no idea what I'm doing.",
+        "effects": { "evelyn_rel": 5 },
+        "flags": ["lost"],
+        "next": "s1_pantry"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "s1_pantry",
+    "location": "Office pantry — Monday 8:47am",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "You're making coffee when someone walks in. Pink hair, sharp eyes, a thermos in one hand."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "You must be the new one. Clara Lim — finance team, two floors up. First day?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "Yeah. Still figuring out where the bathroom is honestly."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "smile",
+        "text": "Fair. That took me a week. Hey — do you have a plan for your salary yet? I'm not being weird. I just wish someone had asked me that when I started. I spent mine in nine days."
+      }
+    ],
+    "choices": [
+      {
+        "text": "Sort of. I want to save but not sure how much.",
+        "effects": { "clara_rel": 10 },
+        "flags": [],
+        "next": "s1b_skip"
+      },
+      {
+        "text": "Not really. I'll see how it goes.",
+        "effects": { "aiden_rel": 5 },
+        "flags": [],
+        "next": "s1b_skip"
+      },
+      {
+        "text": "I have no idea. Should I?",
+        "effects": { "evelyn_rel": 10 },
+        "flags": [],
+        "next": "s1b_clara_tip"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "s1b_clara_tip",
+    "location": "Office pantry — continued",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Okay so — 50% needs, 30% wants, 20% savings. You don't have to be perfect about it. Just start somewhere."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "That's actually... simple enough."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "smile",
+        "text": "Right? Nobody teaches us this. Anyway — bathroom is down the left corridor, past the always-broken printer."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "She leaves. You didn't expect the first useful thing you'd learn at this job to happen before you even sat down."
+      }
+    ],
+    "choices": [],
+    "next": "s2_apartment"
+  },
+  {
+    "id": "s1b_skip",
+    "location": "Office pantry — continued",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Fair enough. First week is always a blur anyway. I'm Clara — if you ever want to talk money stuff, you know where to find me."
+      }
+    ],
+    "choices": [],
+    "next": "s2_apartment"
+  },
+  {
+    "id": "s2_apartment",
+    "location": "Apartment — that evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Aiden is home before you. Shoes off, three Shopee tabs open, very comfortable in his slightly-larger room."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "happy",
+        "text": "Bro! First day done. How was it? Eh — there's a flash sale tonight. Mechanical keyboard, was RM 400, now RM 180. You want to split shipping?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "I haven't even gotten paid yet."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "smug",
+        "text": "So? Only RM 180. Investment in productivity. Aiden-certified, 100% recommended."
+      }
+    ],
+    "choices": [
+      {
+        "text": "I'll pass. Not spending before I see my account.",
+        "effects": { "clara_rel": 10, "aiden_rel": -5 },
+        "flags": [],
+        "next": "s3_evelyn"
+      },
+      {
+        "text": "Fine. Just this once.",
+        "effects": { "aiden_rel": 10, "balance": -180 },
+        "flags": ["bought_keyboard"],
+        "next": "s3_evelyn"
+      },
+      {
+        "text": "Let me think about it.",
+        "effects": {},
+        "flags": [],
+        "next": "s3_evelyn"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "s3_evelyn",
+    "location": "Your room — phone call",
+    "background": "bg_bedroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Your phone lights up. It's Evelyn."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "happy",
+        "text": "OKAY I need to tell someone — I just signed my offer letter. I start next week. Are you panicking? Because I'm panicking a little."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "A little. My roommate is already trying to get me to spend money."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "worried",
+        "text": "Oh no. Is he the fun kind of bad influence or the actually dangerous kind?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "neutral",
+        "text": "Can we just figure this out together? Tell each other what we're doing with our salaries and keep each other honest?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Yeah. Deal. Monthly check-ins.",
+        "effects": { "evelyn_rel": 15 },
+        "flags": ["evelyn_checkin"],
+        "next": "s4_salary_day"
+      },
+      {
+        "text": "Sure — I also met someone at work who might actually know what she's doing.",
+        "effects": { "evelyn_rel": 10, "clara_rel": 5 },
+        "flags": [],
+        "next": "s4_salary_day"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "s4_salary_day",
+    "location": "Your room — the 25th, 12:01am",
+    "background": "bg_bedroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "You can't sleep. You open your banking app. Refresh. Then — RM 2,500. You stare at it longer than you mean to."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Three notifications arrive almost at once."
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Ms. Clara: Salary day. Do you have a plan yet? — C.L."
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Aiden: BROOO ITS IN 🔥 mamak tonight my treat (you pay me back later lol)"
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Evelyn: okay I got mine too. I have absolutely no idea what to do. please help."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "RM 2,500. One month. Three voices pulling in different directions. What's your move?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Reply to Ms. Clara — I'm ready to make a plan.",
+        "effects": { "clara_rel": 15 },
+        "flags": ["clara_route"],
+        "next": "s5_budget_intro"
+      },
+      {
+        "text": "Reply to Aiden — mamak sounds good.",
+        "effects": { "aiden_rel": 15, "balance": -35 },
+        "flags": ["aiden_route"],
+        "next": "s5_budget_intro"
+      },
+      {
+        "text": "Reply to Evelyn — let's figure it out together.",
+        "effects": { "evelyn_rel": 15 },
+        "flags": ["evelyn_route"],
+        "next": "s5_budget_intro"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "s5_budget_intro",
+    "location": "Your room — salary day morning",
+    "background": "bg_bedroom_day",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Morning comes fast. RM 2,500 is sitting in your account. Rent is due in two weeks. Time to figure out where it all goes."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Okay. Open your notes app. Let's map this out before you spend a single ringgit."
+      }
+    ],
+    "choices": [],
+    "next": "budget_screen"
+  }
+]

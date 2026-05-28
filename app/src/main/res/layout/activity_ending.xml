@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_spring_outdoor"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Dark overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <!-- Character sprite — same as DialogueActivity -->
+    <ImageView
+        android:id="@+id/imgCharacter"
+        android:layout_width="340dp"
+        android:layout_height="580dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="220dp"
+        android:scaleType="fitEnd"
+        android:contentDescription="Character"
+        android:visibility="invisible"
+        android:alpha="0" />
+
+    <!-- Hidden progress bar needed for code -->
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/scoreProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:progress="0"
+        android:max="100" />
+
+    <!-- TOP: ending type + title + stats -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/tvEndingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MONTH 3 COMPLETE"
+            android:textColor="#AAFFFFFF"
+            android:textSize="10sp"
+            android:letterSpacing="0.2"
+            android:alpha="0"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/tvEndingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            android:layout_marginBottom="4dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="36dp"
+            android:layout_height="2dp"
+            android:background="#EF9F27"
+            android:layout_marginBottom="10dp"
+            android:alpha="0" />
+
+        <!-- Stats card — single row -->
+        <LinearLayout
+            android:id="@+id/statsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:alpha="0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BALANCE"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.1" />
+                <TextView
+                    android:id="@+id/tvStatBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#33FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAVED"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.1" />
+                <TextView
+                    android:id="@+id/tvStatSavings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0"
+                    android:textColor="#1D9E75"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#33FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEBT"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.1" />
+                <TextView
+                    android:id="@+id/tvStatDebt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0"
+                    android:textColor="#F09595"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#33FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SCORE"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.1" />
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/100"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM PANEL — same position as dialogue box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="20dp">
+
+        <!-- Relationships -->
+        <LinearLayout
+            android:id="@+id/relCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:layout_marginBottom="6dp"
+            android:alpha="0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clara"
+                    android:textColor="#1D9E75"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp" />
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/claraProgress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:progressTint="#1D9E75"
+                    android:progress="0"
+                    android:max="100" />
+                <TextView
+                    android:id="@+id/tvClaraRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="8dp" android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aiden"
+                    android:textColor="#D85A30"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp" />
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/aidenProgress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:progressTint="#D85A30"
+                    android:progress="0"
+                    android:max="100" />
+                <TextView
+                    android:id="@+id/tvAidenRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="8dp" android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evelyn"
+                    android:textColor="#7F77DD"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp" />
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/evelynProgress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:progressTint="#7F77DD"
+                    android:progress="0"
+                    android:max="100" />
+                <TextView
+                    android:id="@+id/tvEvelynRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Dialogue box with tip inside -->
+        <LinearLayout
+            android:id="@+id/endingDialogue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0">
+
+            <TextView
+                android:id="@+id/tvEndingSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvEndingDialogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"
+                android:minLines="2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#33FFFFFF"
+                android:layout_marginVertical="8dp" />
+
+            <LinearLayout
+                android:id="@+id/tipCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡  "
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#AAFFFFFF"
+                    android:textSize="11sp"
+                    android:lineSpacingExtra="3dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Play Again button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Play Again"
+            android:textColor="#412402"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            app:backgroundTint="#EF9F27"
+            app:cornerRadius="24dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

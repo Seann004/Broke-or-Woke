@@ -1,0 +1,310 @@
+[
+  {
+    "id": "act3_intro",
+    "location": "Your room — Month 3, Day 1",
+    "background": "bg_bedroom_day",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Month 3. The last month of your first quarter as a working adult."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Three months ago you moved into this apartment not knowing anyone. Now you have a roommate who overspends, a colleague who went broke at 23, and a childhood friend who's finally figuring out her savings."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "And you. Somewhere in the middle of all of it."
+      }
+    ],
+    "choices": [],
+    "next": "act3_s1_aiden_growth"
+  },
+  {
+    "id": "act3_s1_aiden_growth",
+    "location": "Apartment — morning",
+    "background": "bg_livingroom_day",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Aiden is making breakfast. Actual breakfast — not mamak takeout."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "I've been thinking. About the whole money thing."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "I talked to Clara. She didn't judge me. She just... asked me what I actually want in five years. Nobody's ever asked me that."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "What did you say?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "I want to travel. Like properly. But I can't do that if I'm always broke by week 2."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "He goes quiet for a moment."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "I started a savings jar. It has RM 50 in it. Don't laugh."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "I'm not laughing."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "RM 50 is more than I had last month. That's something, right?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Yeah. That's actually something.",
+        "effects": { "aiden_rel": 15 },
+        "flags": ["validated_aiden"],
+        "next": "act3_s2_evelyn_reflection"
+      },
+      {
+        "text": "Keep going. RM 50 becomes RM 500 if you keep at it.",
+        "effects": { "aiden_rel": 10, "clara_rel": 5 },
+        "flags": [],
+        "next": "act3_s2_evelyn_reflection"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "act3_s2_evelyn_reflection",
+    "location": "Cafe — weekend",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "You meet Evelyn for the first time in person since moving to KL. She looks different — more settled somehow."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "happy",
+        "text": "I can't believe we're both actually doing this. Like — adult jobs, adult salaries, adult problems."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "neutral",
+        "text": "I've been thinking about everything we talked about over the past two months. I feel like I know more about money now than I learned in school my whole life."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "Same. Though I still have a lot to learn."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "happy",
+        "text": "That's the thing though — at least we know we have a lot to learn. Most people our age don't even realise that yet."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "neutral",
+        "text": "What's the one thing you're going to keep doing differently from now on?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Pay myself first — savings before spending.",
+        "effects": { "evelyn_rel": 10, "clara_rel": 10 },
+        "flags": ["pay_yourself_first"],
+        "next": "act3_s3_clara_final"
+      },
+      {
+        "text": "Track every ringgit — know where it all goes.",
+        "effects": { "evelyn_rel": 10 },
+        "flags": ["track_spending"],
+        "next": "act3_s3_clara_final"
+      },
+      {
+        "text": "Build my emergency fund before anything else.",
+        "effects": { "evelyn_rel": 10, "clara_rel": 15 },
+        "flags": ["emergency_fund_priority"],
+        "next": "act3_s3_clara_final"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "act3_s3_clara_final",
+    "location": "Office — after hours",
+    "background": "bg_office_hallway",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "You're the last one in the office. Clara walks past and stops."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Still here?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "Just finishing something up. Hey — can I ask you something?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Sure."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "When you were rebuilding after going broke — when did it stop feeling scary?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "nostalgic",
+        "text": "When I stopped checking my account with dread and started checking it with curiosity. Like — oh, what happened this month? Instead of — oh no, what happened this month."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "smile",
+        "text": "That shift takes time. But it happens. You're already closer to it than you think."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "She heads out. You sit with that for a moment."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Curiosity, not dread. Maybe that's what being woke actually means."
+      }
+    ],
+    "choices": [],
+    "next": "act3_s4_final_salary"
+  },
+  {
+    "id": "act3_s4_final_salary",
+    "location": "Your room — Month 3 salary day",
+    "background": "bg_bedroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "The final salary notification of the quarter. RM 2,500. Same number it's always been."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "But you're not the same person who stared at it three months ago wondering what to do."
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Ms. Clara: Last month. Make it count. — C.L."
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Aiden: bro my savings jar now has RM 150. i'm basically warren buffett"
+      },
+      {
+        "type": "system",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Evelyn: third month!! we made it!! budget check-in tonight?"
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Three months. Three voices. One salary. You know what to do."
+      }
+    ],
+    "choices": [],
+    "next": "budget_screen"
+  }
+]

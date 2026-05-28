@@ -1,0 +1,359 @@
+[
+  {
+    "id": "act2_intro",
+    "location": "Your room — Month 2, Day 1",
+    "background": "bg_bedroom_day",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Month 2. You've survived your first month in KL. Barely."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "The salary notification comes in again. RM 2,500. Same number. But this month feels different — you know what's coming."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s1_consequences"
+  },
+  {
+    "id": "act2_s1_consequences",
+    "location": "Office pantry — Month 2",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Month 2. How did Month 1 go?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "Honestly? I learned a lot."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "smile",
+        "text": "That's all Month 1 is for. The real test is whether you do anything differently with what you learned."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s2_aiden_debt"
+  },
+  {
+    "id": "act2_s2_aiden_debt",
+    "location": "Apartment — evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Aiden is quieter than usual when you get home. No Shopee tabs open. That's new."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "worried",
+        "text": "Hey... can I talk to you about something?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "worried",
+        "text": "I kind of... overspent last month. Like, significantly. My credit card bill came in and I genuinely don't know how to pay it."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "How much?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "worried",
+        "text": "RM 1,200. I thought I could handle it. I really thought I could."
+      }
+    ],
+    "choices": [
+      {
+        "text": "Offer to help him make a repayment plan.",
+        "effects": { "aiden_rel": 15, "clara_rel": 5 },
+        "flags": ["helped_aiden_debt"],
+        "next": "act2_s2a_help_aiden"
+      },
+      {
+        "text": "Tell him to talk to Clara — she knows this stuff.",
+        "effects": { "aiden_rel": 5, "clara_rel": 10 },
+        "flags": ["referred_aiden_clara"],
+        "next": "act2_s2b_refer_clara"
+      },
+      {
+        "text": "That's rough. But you warned him.",
+        "effects": { "aiden_rel": -5 },
+        "flags": [],
+        "next": "act2_s2c_cold"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "act2_s2a_help_aiden",
+    "location": "Apartment — evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "You'd do that? I thought you'd just say 'I told you so'."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "That doesn't help anyone. Let's look at your expenses and figure out what you can cut this month."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "...okay. Yeah. Let's do that."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "You spend the next hour going through Aiden's spending. It's worse than you thought. But at least he's finally looking at it."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s3_evelyn_call"
+  },
+  {
+    "id": "act2_s2b_refer_clara",
+    "location": "Apartment — evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "Clara? She'll judge me."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "She went broke at 23. She won't judge you."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "neutral",
+        "text": "...really? I didn't know that."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s3_evelyn_call"
+  },
+  {
+    "id": "act2_s2c_cold",
+    "location": "Apartment — evening",
+    "background": "bg_livingroom_night",
+    "lines": [
+      {
+        "type": "dialogue",
+        "speaker": "Aiden",
+        "character": "aiden",
+        "expression": "worried",
+        "text": "Yeah. You did. I should've listened."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "There's an awkward silence. Aiden goes to his room. You feel like you said the right thing — but it didn't feel good."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s3_evelyn_call"
+  },
+  {
+    "id": "act2_s3_evelyn_call",
+    "location": "Your room — night",
+    "background": "bg_bedroom_night",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Evelyn calls. She sounds more settled than last month."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "happy",
+        "text": "Okay so — I actually tried the 50/30/20 thing this month. It was hard but I did it."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "How did it feel?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "happy",
+        "text": "Honestly? Like I actually have control for the first time. I have RM 400 saved. It's not much but it's MINE and I put it there on purpose."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Evelyn",
+        "character": "evelyn",
+        "expression": "neutral",
+        "text": "How about you? Did last month teach you anything?"
+      }
+    ],
+    "choices": [
+      {
+        "text": "Yeah — I need to save more and spend less on wants.",
+        "effects": { "evelyn_rel": 10, "clara_rel": 5 },
+        "flags": ["learned_month1"],
+        "next": "act2_s4_clara_lesson"
+      },
+      {
+        "text": "I'm still figuring it out honestly.",
+        "effects": { "evelyn_rel": 10 },
+        "flags": [],
+        "next": "act2_s4_clara_lesson"
+      },
+      {
+        "text": "I think I did okay. Could've saved more though.",
+        "effects": { "evelyn_rel": 5, "clara_rel": 5 },
+        "flags": [],
+        "next": "act2_s4_clara_lesson"
+      }
+    ],
+    "next": ""
+  },
+  {
+    "id": "act2_s4_clara_lesson",
+    "location": "Office pantry — lunch break",
+    "background": "bg_office_pantry",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Clara finds you in the pantry during lunch. She has that look — the one that means she's about to say something you need to hear."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Can I show you something?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "This is my savings tracker from when I was your age. I started it after I went broke. Every month, I wrote down what I saved and what I learned."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "smile",
+        "text": "Month 1 was terrible. Month 2 was slightly less terrible. That's the whole secret — just keep going."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "You",
+        "character": "mc",
+        "expression": "neutral",
+        "text": "Did you ever feel like you were too far behind to catch up?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "nostalgic",
+        "text": "Every single month for a year. And then one day I checked my account and realised I had three months of expenses saved. I cried in a public bathroom. It was not cute."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "She laughs — actually laughs. You've never seen her do that before."
+      }
+    ],
+    "choices": [],
+    "next": "act2_s5_budget_bridge"
+  },
+  {
+    "id": "act2_s5_budget_bridge",
+    "location": "Your room — Month 2 salary day",
+    "background": "bg_bedroom_day",
+    "lines": [
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Salary day again. This time you open the banking app without hesitation. RM 2,500."
+      },
+      {
+        "type": "narration",
+        "speaker": "",
+        "character": "",
+        "expression": "neutral",
+        "text": "Last month taught you something. This month, you're applying it."
+      },
+      {
+        "type": "dialogue",
+        "speaker": "Ms. Clara",
+        "character": "clara",
+        "expression": "neutral",
+        "text": "Month 2 budget time. You know the drill. Let's see if last month changed anything."
+      }
+    ],
+    "choices": [],
+    "next": "budget_screen"
+  }
+]

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <!-- Background image -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_bedroom_night"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Dark overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_gradient_overlay" />
+
+    <!-- CHARACTER SPRITE — behind dialogue, centered bottom -->
+    <ImageView
+        android:id="@+id/imgCharacter"
+        android:layout_width="380dp"
+        android:layout_height="620dp"
+        android:layout_marginBottom="120dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/char_clara_neutral"
+        android:scaleType="fitCenter"
+        android:contentDescription="Ms. Clara"
+        android:alpha="0" />
+
+    <!-- UI layer on top of character -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- Chapter label -->
+        <TextView
+            android:id="@+id/tvChapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHAPTER 0"
+            android:textColor="#AAFFFFFF"
+            android:textSize="10sp"
+            android:letterSpacing="0.2"
+            android:alpha="0"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Scene title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before we begin..."
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Gold divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="36dp"
+            android:layout_height="2dp"
+            android:background="#EF9F27"
+            android:layout_marginBottom="12dp"
+            android:alpha="0" />
+
+        <!-- Clara dialogue bubble -->
+        <LinearLayout
+            android:id="@+id/dialogueBubble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp"
+            android:alpha="0">
+
+            <TextView
+                android:id="@+id/tvSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ms. Clara"
+                android:textColor="#1D9E75"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDialogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"
+                android:minLines="2" />
+
+        </LinearLayout>
+
+        <!-- Name input label -->
+        <TextView
+            android:id="@+id/tvInputLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR NAME"
+            android:textColor="#AAFFFFFF"
+            android:textSize="10sp"
+            android:letterSpacing="0.15"
+            android:alpha="0"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Name text field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="#EF9F27"
+            app:hintTextColor="#EF9F27"
+            app:boxBackgroundColor="#55000000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#66FFFFFF"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="20"
+                android:imeOptions="actionDone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Begin button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBegin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Start My Story  ▶"
+            android:textColor="#412402"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:alpha="0"
+            app:backgroundTint="#EF9F27"
+            app:cornerRadius="26dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
