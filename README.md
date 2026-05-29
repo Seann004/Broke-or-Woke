@@ -1,4 +1,4 @@
-# 💸 Broke or Woke?
+# Broke or Woke?
 
 > A financial literacy serious game for Android — built as a galge (visual novel) where every financial choice has real consequences.
 
