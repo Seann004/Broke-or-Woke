@@ -160,4 +160,197 @@
 
     </LinearLayout>
 
+    <!-- Pregame Quiz -->
+    <LinearLayout
+        android:id="@+id/quizOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/quizCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:padding="20dp"
+            android:layout_margin="16dp">
+
+            <!-- Quiz label -->
+            <TextView
+                android:id="@+id/tvQuizLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FINANCIAL KNOWLEDGE CHECK"
+                android:textColor="#EF9F27"
+                android:textSize="9sp"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Question number -->
+            <TextView
+                android:id="@+id/tvQuestionNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 1 of 3"
+                android:textColor="#AAFFFFFF"
+                android:textSize="11sp"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Question text -->
+            <TextView
+                android:id="@+id/tvQuestionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Option A -->
+            <LinearLayout
+                android:id="@+id/optionA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvOptALabel"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvOptA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Option B -->
+            <LinearLayout
+                android:id="@+id/optionB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvOptBLabel"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvOptB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Option C -->
+            <LinearLayout
+                android:id="@+id/optionC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvOptCLabel"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvOptC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Option D -->
+            <LinearLayout
+                android:id="@+id/optionD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvOptDLabel"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="D"
+                    android:textColor="#EF9F27"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvOptD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Feedback text — shown after answer -->
+            <TextView
+                android:id="@+id/tvQuizFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="14dp"
+                android:visibility="gone" />
+
+            <!-- Next / Confirm button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnQuizNext"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Select an answer"
+                android:textColor="#412402"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:backgroundTint="#EF9F27"
+                app:cornerRadius="22dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </FrameLayout>

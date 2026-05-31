@@ -514,4 +514,100 @@
 
     </ScrollView>
 
+    <!-- No savings confirmation overlay — same style as bio card -->
+    <LinearLayout
+        android:id="@+id/noSavingsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/noSavingsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:padding="20dp"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠ WARNING"
+                android:textColor="#F09595"
+                android:textSize="9sp"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Savings This Month?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You have not allocated anything to savings this month."
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Without savings, one unexpected expense — a medical bill, a car breakdown — could put you in debt immediately."
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ms. Clara went broke at 23 because she had no savings buffer. Are you sure?"
+                android:textColor="#AAFFFFFF"
+                android:textSize="11sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#33FFFFFF"
+                android:layout_marginBottom="14dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProceedNoSavings"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Proceed with RM 0 savings"
+                android:textColor="#412402"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                app:backgroundTint="#EF9F27"
+                app:cornerRadius="22dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoBack"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Let me adjust my budget"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:backgroundTint="#33FFFFFF"
+                app:cornerRadius="22dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </FrameLayout>

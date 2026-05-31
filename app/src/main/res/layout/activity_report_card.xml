@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_office_pantry"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Dark overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BB000000" />
+
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvMonthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONTH 1 FINANCIAL REPORT"
+                android:textColor="#AAFFFFFF"
+                android:textSize="10sp"
+                android:letterSpacing="0.2"
+                android:alpha="0"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How did you do?"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:alpha="1"
+                android:layout_marginBottom="4dp"
+                android:id="@+id/tvTitle"/>
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="#EF9F27"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Achievement banner — shown if milestone hit -->
+            <LinearLayout
+                android:id="@+id/achievementBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆  "
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAchievementTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#EF9F27"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="3dp" />
+
+                    <TextView
+                        android:id="@+id/tvAchievementDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="11sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Report card metrics -->
+            <LinearLayout
+                android:id="@+id/reportCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:alpha="0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUDGET BREAKDOWN"
+                    android:textColor="#88FFFFFF"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Savings rate row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Savings rate"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target: 20%"
+                            android:textColor="#66FFFFFF"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvSavingsRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvSavingsIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ✓"
+                        android:textColor="#1D9E75"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#22FFFFFF" android:layout_marginBottom="10dp" />
+
+                <!-- Needs row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Needs (Rent + Food + Transport)"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target: 50%"
+                            android:textColor="#66FFFFFF"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvNeedsRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvNeedsIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ✓"
+                        android:textColor="#1D9E75"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#22FFFFFF" android:layout_marginBottom="10dp" />
+
+                <!-- Wants row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wants"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target: max 30%"
+                            android:textColor="#66FFFFFF"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvWantsRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvWantsIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ✓"
+                        android:textColor="#1D9E75"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#22FFFFFF" android:layout_marginBottom="10dp" />
+
+                <!-- Emergency fund row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total savings"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Target: RM 500 minimum"
+                            android:textColor="#66FFFFFF"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvSavingsTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RM 0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvSavingsIcon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ✗"
+                        android:textColor="#F09595"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Clara feedback bubble -->
+            <LinearLayout
+                android:id="@+id/claraFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:alpha="0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ms. Clara"
+                    android:textColor="#1D9E75"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvClaraFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+            <!-- Financial fact box -->
+            <LinearLayout
+                android:id="@+id/factBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dialogue_bubble_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp"
+                android:alpha="0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡  "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvFinancialFact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#AAFFFFFF"
+                    android:textSize="11sp"
+                    android:lineSpacingExtra="3dp" />
+
+            </LinearLayout>
+
+            <!-- Continue button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Continue to Month ▶"
+                android:textColor="#412402"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:alpha="0"
+                app:backgroundTint="#EF9F27"
+                app:cornerRadius="26dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- No savings confirmation overlay -->
+    <LinearLayout
+        android:id="@+id/noSavingsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/noSavingsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialogue_bubble_bg"
+            android:padding="20dp"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠ WARNING"
+                android:textColor="#F09595"
+                android:textSize="9sp"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Savings This Month?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You have not allocated anything to savings this month."
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Without savings, one unexpected expense — a medical bill, a car breakdown — could put you in debt immediately."
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ms. Clara went broke at 23 because she had no savings buffer. Are you sure you want to proceed?"
+                android:textColor="#AAFFFFFF"
+                android:textSize="11sp"
+                android:fontStyle="italic"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#33FFFFFF"
+                android:layout_marginBottom="14dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProceedNoSavings"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Proceed with RM 0 savings"
+                android:textColor="#412402"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                app:backgroundTint="#EF9F27"
+                app:cornerRadius="22dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoBack"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Let me adjust my budget"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:backgroundTint="#33FFFFFF"
+                app:cornerRadius="22dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
