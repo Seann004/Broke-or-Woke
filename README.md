@@ -222,17 +222,3 @@ flags: MutableList<String>  // decision history, met_* flags, event_used_* flags
 
 ---
 
-## 🚀 How to Run
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Broke-or-Woke.git
-```
-
-1. Open project in Android Studio
-2. Wait for Gradle sync to complete
-3. Run on emulator (API 24+) or physical Android device with USB debugging enabled
-
----
-
-
-*Broke or Woke? — Because nobody taught us this in school.*
